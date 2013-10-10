@@ -7,6 +7,7 @@ import collection.mutable.MutableList
 
 object Users extends Controller {
 
+  println("User object fired !")
   val users = MutableList(
     User(Some(1), "john@doe.com", "John", "Doe"),
     User(Some(2), "jane@doe.com", "Jane", "Doe")

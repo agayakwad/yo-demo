@@ -10,7 +10,16 @@ GET     /assets/*file        controllers.Assets.at(path="/public", file)
 
 GET     /ui                  com.tuplejump.playYeoman.Yeoman.index 
 
-->      /ui/                 yeoman.Routes   
+->      /ui/                 yeoman.Routes 
+->      /ui/                  api.Routes
+  
+#GET     /                    com.tuplejump.playYeoman.Yeoman.redirectRoot(base="/ui/")
+
+#GET     /user                       controllers.Users.index()
+#GET     /user/:id                   controllers.Users.edit(id: Long)
+#POST    /user/:id                   controllers.Users.save(id: Long)
+#DELETE  /user/:id                   controllers.Users.remove(id: Long)
+
  
 
  

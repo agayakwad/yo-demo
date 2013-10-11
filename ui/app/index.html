@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  <script>
+			document.write('<script src="http://'
+					+ (location.host || 'localhost').split(':')[0]
+					+ ':35729/livereload.js?snipver=1"></' + 'script>')
+		</script>
   <body ng-app="uiApp">
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -26,7 +30,10 @@
     <![endif]-->
 
 <div>Hello test!</div>
-
+    <ul class="nav nav-pills" data-ng-controller="NavbarController">
+                    <li data-ng-class="{'active':getClass('/customers')}"><a href="#/customers">Customers</a></li>
+                    <li data-ng-class="{'active':getClass('/orders')}"><a href="#/users">Users</a></li>
+    </ul>
     <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
 
@@ -49,10 +56,16 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+					var _gaq = [ [ '_setAccount', 'UA-XXXXX-X' ],
+							[ '_trackPageview' ] ];
+					(function(d, t) {
+						var g = d.createElement(t), s = d
+								.getElementsByTagName(t)[0];
+						g.src = ('https:' == location.protocol ? '//ssl'
+								: '//www')
+								+ '.google-analytics.com/ga.js';
+						s.parentNode.insertBefore(g, s)
+					}(document, 'script'));
+				</script>
   </body>
 </html>

@@ -1,11 +1,17 @@
 'use strict';
 
 angular.module('uiApp').factory('UserFactory', ['$resource', function ($resource) {  
-  return $resource('#/user/:userId', {'userId': '@id'}); 
+ 
+	return $resource('/user/:userId', {'userId': '@id'});
+	/*return $resource("user/:userId", {'userId': "@Id"}, {
+      "update": {method:"PUT"},
+      "query": { method:"GET", isArray: true }
+    });*/
 }]);
  
 
-/*angular.module('uiApp').factory('UserFactory', [ '$resource', function($resource) {
+/* //return $resource('/user/:userId', {'userId': '@id'}); 
+ * angular.module('uiApp').factory('UserFactory', [ '$resource', function($resource) {
 console.log('user service!');
 var users = [ {
 	id : 1,

@@ -38,10 +38,10 @@ app.controller(
 				} ]);
 
 
-app.service('User', function() {
+/*app.service('User', function() {
 	this.action = function() {
 		return $resource('/user/:userId', {
 			'userId' : '@id'
 		});
 	}
-});
+});*/

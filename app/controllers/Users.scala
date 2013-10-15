@@ -48,7 +48,7 @@ object Users extends Controller {
   }
 
   def remove(id: Long) = Action { implicit request =>
-    Ok("Working")
+     Ok(Json.toJson(users))
   }
 
 }

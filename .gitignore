@@ -16,7 +16,7 @@ dist
 ui/libpeerconnection.log
 
 
-target
+.target
 bin
 .cache
 

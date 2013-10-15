@@ -16,6 +16,10 @@ dist
 ui/libpeerconnection.log
 
 
+target
+bin
+.cache
+
 # Compiled source #
 ###################
 *.com

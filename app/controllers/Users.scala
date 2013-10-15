@@ -9,8 +9,9 @@ object Users extends Controller {
 
   println("User object fired !")
   val users = MutableList(
-    User(Some(1), "john@doe.com", "John", "Doe"),
-    User(Some(2), "jane@doe.com", "Jane", "Doe")
+    User(Some(1), "Biswa@hirepro.com", "Biswa", "M"),
+    User(Some(2), "anil.ag@hirepro.com", "Anil", "S"),
+    User(Some(3), "syed.j@hirepro.com", "Syed", "J")
   )
 
   def index() = Action { implicit request =>
@@ -47,7 +48,7 @@ object Users extends Controller {
   }
 
   def remove(id: Long) = Action { implicit request =>
-    Ok("")
+    Ok("Working")
   }
 
 }

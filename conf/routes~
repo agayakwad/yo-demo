@@ -3,12 +3,12 @@
 # ~~~~
 
 # Home page
-#GET     /                           controllers.Application.index
+GET     /                           controllers.Application.index
 
-GET     /user                       controllers.Users.index()
-GET     /user/:id                   controllers.Users.edit(id: Long)
-POST    /user/:id                   controllers.Users.save(id: Long)
-DELETE  /user/:id                   controllers.Users.remove(id: Long)
+#GET     /user                       controllers.Users.index
+#GET     /user/:id                   controllers.Users.edit(id: Long)
+#POST    /user/:id                   controllers.Users.save(id: Long)
+#DELETE  /user/:id                   controllers.Users.remove(id: Long)
 
 POST    /customers                    controllers.Customers.test(id: Long)
 POST    /customerorders/:customerID   controllers.Customers.test(id: Long)

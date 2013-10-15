@@ -2,7 +2,7 @@
 
 angular.module('uiApp').factory('UserFactory', ['$resource', function ($resource) {  
  
-	return $resource('/user/:userId', {'userId': '@id'});
+	return $resource('/api/user/:userId', {'userId': '@id'});
 	/*return $resource("user/:userId", {'userId': "@Id"}, {
       "update": {method:"PUT"},
       "query": { method:"GET", isArray: true }

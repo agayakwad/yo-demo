@@ -1,6 +1,14 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
+# OLD HOME PAGE
+GET     /oldhome             controllers.Application.index
+
+GET     /api/somejson        controllers.Application.json(keyword: String)
+GET     /api/user           controllers.Users.index()
+GET     /api/user/:id                   controllers.Users.edit(id: Long)
+POST    /api/user/:id                   controllers.Users.save(id: Long)
+DELETE  /api/user/:id                   controllers.Users.remove(id: Long)
 
 # Home page
 GET     /                    com.tuplejump.playYeoman.Yeoman.redirectRoot(base="/ui/")
@@ -10,8 +18,7 @@ GET     /assets/*file        controllers.Assets.at(path="/public", file)
 
 GET     /ui                  com.tuplejump.playYeoman.Yeoman.index 
 
-->      /ui/                 yeoman.Routes 
-->      /ui/                  api.Routes
+->      /ui/                 yeoman.Routes  
   
 #GET     /                    com.tuplejump.playYeoman.Yeoman.redirectRoot(base="/ui/")
 

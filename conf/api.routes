@@ -1,5 +1,0 @@
-
-GET    /ui/user                                                         controllers.Users.index()
-GET    /ui/user/:id                                                     controllers.Users.edit(id: Long)
-POST   /ui/user/:id                                                     controllers.Users.save(id: Long)
-DELETE /ui/user/:id                                                     controllers.Users.remove(id: Long)

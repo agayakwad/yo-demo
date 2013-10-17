@@ -6,10 +6,12 @@ app.controller(
 				function($scope, $routeParams, $location, $injector, User) {
 
 					try {
+						
 						common = $injector.get('User');
 						console.log('Injector has user service!');
 						
 					} catch (e) {
+						
 						console.log('Injector does not have user service!');
 						
 					}

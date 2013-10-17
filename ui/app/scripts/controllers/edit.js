@@ -8,8 +8,10 @@ app.controller(
 					/*try {
 						common = $injector.get('User');
 						console.log('Injector has user service!');
+						
 					} catch (e) {
 						console.log('Injector does not have user service!');
+						
 					}
 					if (common) {
 						common.action();

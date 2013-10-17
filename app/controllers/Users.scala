@@ -30,10 +30,12 @@ object Users extends Controller {
    request.body.validate[User].fold(
       invalid = e => BadRequest(JsError.toFlatJson(e)),
       valid = { user =>
+        
         users.find(_.id == Some(id)).map { storedUser =>
           // Update user with same id
           users.update(users.indexOf(storedUser), user)
           Ok(Json.toJson(user)) 
+          
         } getOrElse { 
           // Insert new user
           val lastId = users.maxBy(_.id).id.get

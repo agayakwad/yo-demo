@@ -33,10 +33,8 @@ object Users extends Controller {
         users.find(_.id == Some(id)).map { storedUser =>
           // Update user with same id
           users.update(users.indexOf(storedUser), user)
-          Ok(Json.toJson(user))
-
-        } getOrElse {
-
+          Ok(Json.toJson(user)) 
+        } getOrElse { 
           // Insert new user
           val lastId = users.maxBy(_.id).id.get
           val userWithNewId = user.copy(id = Some(lastId + 1))

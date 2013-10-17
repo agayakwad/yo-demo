@@ -5,6 +5,7 @@
 GET     /oldhome             controllers.Application.index
 
 GET     /api/somejson        controllers.Application.json(keyword: String)
+
 GET     /api/user           controllers.Users.index()
 GET     /api/user/:id                   controllers.Users.edit(id: Long)
 POST    /api/user/:id                   controllers.Users.save(id: Long)

@@ -5,7 +5,7 @@ app.controller(
 		[ '$scope', '$routeParams', '$location', '$injector','UserFactory',
 				function($scope, $routeParams, $location, $injector, User) {
 
-					/*try {
+					try {
 						common = $injector.get('User');
 						console.log('Injector has user service!');
 						
@@ -13,6 +13,7 @@ app.controller(
 						console.log('Injector does not have user service!');
 						
 					}
+					/*
 					if (common) {
 					
 						common.action();

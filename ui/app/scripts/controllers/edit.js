@@ -14,7 +14,9 @@ app.controller(
 						
 					}
 					if (common) {
+					
 						common.action();
+						
 					}
 					*/
 					$scope.user = User.get({
